@@ -10,12 +10,12 @@ const App = () => {
           <span className="text-xl font-bold tracking-tighter serif">{siteConfig.name}</span>
         </div>
         <div className="hidden md:flex space-x-12 text-[10px] uppercase tracking-[0.3em] font-semibold opacity-60">
-          <a href="#about" className="hover:text-accent transition-colors">Manifesto</a>
-          <a href="#contents" className="hover:text-accent transition-colors">Contents</a>
-          <a href="#order" className="hover:text-accent transition-colors">Order</a>
+          <a href="#about" className="hover:text-accent transition-colors">Manifest</a>
+          <a href="#contents" className="hover:text-accent transition-colors">Treść</a>
+          <a href="#order" className="hover:text-accent transition-colors">Zamów</a>
         </div>
         <button className="text-[10px] uppercase tracking-[0.2em] font-bold border border-white/20 px-6 py-2 hover:bg-fg hover:text-bg transition-all">
-          Cart (0)
+          Koszyk (0)
         </button>
       </nav>
 
@@ -75,7 +75,7 @@ const App = () => {
         <section id="contents" className="py-32 px-8 md:px-16">
           <div className="grid md:grid-cols-2 gap-24">
             <div>
-               <h2 className="text-5xl mb-16 underline decoration-accent underline-offset-8">Table of Contents</h2>
+               <h2 className="text-5xl mb-16 underline decoration-accent underline-offset-8">Spis Treści</h2>
                <div className="space-y-12">
                   {siteConfig.product.chapters.map((chapter) => (
                     <div key={chapter.id} className="group cursor-default">
@@ -89,7 +89,7 @@ const App = () => {
                </div>
             </div>
             <div className="bg-dark-surface p-12 md:p-20 flex flex-col justify-center border border-white/5">
-               <h3 className="text-3xl mb-8">What you get</h3>
+               <h3 className="text-3xl mb-8">Co otrzymujesz</h3>
                <ul className="space-y-6">
                   {siteConfig.product.features.map((feature, i) => (
                     <li key={i} className="flex items-center gap-4 text-muted">
@@ -104,7 +104,7 @@ const App = () => {
                     <span className="text-sm opacity-40 line-through">199 PLN</span>
                   </div>
                   <button id="order" className="w-full bg-fg text-bg py-6 font-black text-sm uppercase tracking-[0.3em] hover:bg-accent hover:text-bg transition-colors">
-                    Buy the Manual
+                    Kup Podręcznik
                   </button>
                </div>
             </div>

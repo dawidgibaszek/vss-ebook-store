@@ -1,48 +1,48 @@
 // src/config/site.ts
 export const siteConfig = {
-  name: "Deepness",
-  tagline: "Manual for Focus in the Age of Noise",
-  description: "A comprehensive system for reclaiming your cognitive sovereignty.",
+  name: "Głębia",
+  tagline: "Manifest Skupienia w Epoce Szumu",
+  description: "Kompletny system odzyskiwania suwerenności poznawczej.",
   
   product: {
-    title: "Digital Deepness",
-    version: "2.0 (2026 Edition)",
+    title: "Cyfrowa Głębia",
+    version: "Wydanie 2.0 (2026)",
     price: "129 PLN",
-    oneLiner: "How to build deep work systems in an AI-saturated world.",
-    description: "This is not just an ebook. It's a architectural blueprint for your mind. Learn how to design a life where concentration is your default state, not a rare event.",
+    oneLiner: "Jak budować systemy pracy głębokiej w świecie nasyconym AI.",
+    description: "To nie jest zwykły ebook. To architektoniczny projekt Twojego umysłu. Naucz się projektować życie, w którym koncentracja jest stanem domyślnym, a nie rzadkim wydarzeniem.",
     chapters: [
-      { id: "01", title: "The Distraction Economy", desc: "Understanding the neural toll of constant connectivity." },
-      { id: "02", title: "The Sovereignty Protocol", desc: "Building your personal digital firewall." },
-      { id: "03", title: "Deep Work Architecture", desc: "Designing environments that force flow states." },
-      { id: "04", title: "Human+AI Synergy", desc: "Using machines without losing your humanity." },
+      { id: "01", title: "Ekonomia Rozproszenia", desc: "Zrozumienie neurologicznego kosztu bycia stale podłączonym." },
+      { id: "02", title: "Protokół Suwerenności", desc: "Budowanie osobistego, cyfrowego firewallu." },
+      { id: "03", title: "Architektura Deep Work", desc: "Projektowanie otoczenia, które wymusza stan flow." },
+      { id: "04", title: "Synergia Człowiek+AI", desc: "Jak korzystać z maszyn, nie tracąc przy tym własnego człowieczeństwa." },
     ],
     features: [
-      "140+ Pages of Evidence-Based Strategies",
-      "Printable Focus Routine Templates",
-      "Private Community Access",
-      "Quarterly Digital Audits"
+      "140+ stron strategii opartych na dowodach",
+      "Szablony rutyn skupienia do druku",
+      "Dostęp do zamkniętej społeczności",
+      "Kwartalne audyty cyfrowego dobrostanu"
     ]
   },
   
   hero: {
-    badge: "Available Now",
-    title: "Focus is the new\nQuiet Luxury.",
-    subtitle: "In a world screaming for your attention, the ultimate power is the ability to ignore it all. Master the art of deep work with the manual that changed everything.",
-    cta: { text: "Secure Your Copy", href: "#order" },
-    secondaryCta: { text: "Read the Preface", href: "#about" },
+    badge: "Dostępne już teraz",
+    title: "Skupienie to nowy\nQuiet Luxury.",
+    subtitle: "W świecie, który krzyczy o Twoją uwagę, ostateczną potęgą jest umiejętność zignorowania wszystkiego. Opanuj sztukę pracy głębokiej z podręcznikiem, który zmienia zasady gry.",
+    cta: { text: "Zabezpiecz swój egzemplarz", href: "#order" },
+    secondaryCta: { text: "Przeczytaj przedmowę", href: "#about" },
   },
   
   about: {
-    title: "Why this? Why now?",
-    text: "Average human attention spans have dropped to 8 seconds. We are becoming a shallow species. 'Digital Deepness' is the antidote. It’s a synthesis of neurobiology, stoic philosophy, and modern productivity systems, designed for those who refuse to be just another data point in an algorithm."
+    title: "Dlaczego to? Dlaczego teraz?",
+    text: "Średni czas skupienia uwagi spadł do 8 sekund. Stajemy się gatunkiem powierzchownym. 'Cyfrowa Głębia' to antidotum. To synteza neurobiologii, filozofii stoickiej i nowoczesnych systemów produktywności, stworzona dla tych, którzy odmawiają bycia jedynie punktem danych w algorytmie."
   },
 
   footer: {
-    copyright: "© 2026 Deepness Studio. Built for the focused few.",
+    copyright: "© 2026 Głębia Studio. Stworzone dla nielicznych skupionych.",
     links: [
-      { text: "Privacy", href: "/privacy" },
-      { text: "Terms", href: "/terms" },
-      { text: "Contact", href: "/contact" },
+      { text: "Prywatność", href: "/privacy" },
+      { text: "Regulamin", href: "/terms" },
+      { text: "Kontakt", href: "/contact" },
     ]
   }
 }
