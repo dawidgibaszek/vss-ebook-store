@@ -2,80 +2,131 @@ import { siteConfig } from './config/site';
 
 const App = () => {
   return (
-    <div className="min-h-screen grain">
+    <div className="min-h-screen grain selection:bg-accent selection:text-bg">
       {/* Navigation */}
-      <nav className="border-b border-black/5 py-6 px-8 flex justify-between items-center bg-white/80 backdrop-blur-md sticky top-0 z-40">
-        <span className="text-2xl font-bold serif tracking-tight">{siteConfig.name}</span>
-        <div className="space-x-8 text-sm font-medium uppercase tracking-widest">
-          <a href="#katalog" className="hover:text-orange-600 transition-colors">Katalog</a>
-          <a href="#metoda" className="hover:text-orange-600 transition-colors">O nas</a>
-          <button className="bg-black text-white px-6 py-2 hover:bg-orange-600 transition-all duration-300">Koszyk (0)</button>
+      <nav className="py-8 px-8 md:px-16 flex justify-between items-center border-b border-white/5 sticky top-0 z-40 bg-bg/90 backdrop-blur-sm">
+        <div className="flex items-center gap-2">
+          <div className="w-8 h-8 bg-accent rounded-full animate-pulse"></div>
+          <span className="text-xl font-bold tracking-tighter serif">{siteConfig.name}</span>
         </div>
+        <div className="hidden md:flex space-x-12 text-[10px] uppercase tracking-[0.3em] font-semibold opacity-60">
+          <a href="#about" className="hover:text-accent transition-colors">Manifesto</a>
+          <a href="#contents" className="hover:text-accent transition-colors">Contents</a>
+          <a href="#order" className="hover:text-accent transition-colors">Order</a>
+        </div>
+        <button className="text-[10px] uppercase tracking-[0.2em] font-bold border border-white/20 px-6 py-2 hover:bg-fg hover:text-bg transition-all">
+          Cart (0)
+        </button>
       </nav>
 
-      {/* Hero Section */}
-      <header className="py-24 px-8 max-w-7xl mx-auto text-center md:text-left md:grid md:grid-cols-2 md:gap-12 items-center">
-        <div>
-          <span className="inline-block border border-orange-500 text-orange-600 px-3 py-1 text-xs font-bold uppercase tracking-widest mb-6">
-            {siteConfig.hero.badge}
-          </span>
-          <h1 className="text-6xl md:text-8xl font-black leading-tight mb-8">
-            {siteConfig.hero.title}
-          </h1>
-          <p className="text-xl text-gray-600 mb-10 max-w-lg leading-relaxed">
-            {siteConfig.hero.subtitle}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <a href={siteConfig.hero.cta.href} className="bg-black text-white text-center px-8 py-4 font-bold text-lg hover:bg-orange-600 transition-all">
-              {siteConfig.hero.cta.text}
-            </a>
-            <a href={siteConfig.hero.secondaryCta.href} className="border border-black text-center px-8 py-4 font-bold text-lg hover:bg-black hover:text-white transition-all">
-              {siteConfig.hero.secondaryCta.text}
-            </a>
-          </div>
-        </div>
-        <div className="mt-12 md:mt-0 relative group">
-          <div className="absolute -inset-4 bg-orange-100 rounded-full blur-3xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
-          <div className="relative bg-white p-8 shadow-2xl border border-black/5 rotate-3 hover:rotate-0 transition-transform duration-500">
-             <div className="aspect-[3/4] bg-gray-100 flex items-center justify-center overflow-hidden border border-black/10">
-                <span className="text-gray-400 serif italic">Okładka Ebooka</span>
-             </div>
-             <div className="mt-6">
-                <h3 className="text-2xl font-bold">{siteConfig.featuredBook.title}</h3>
-                <p className="text-orange-600 font-bold text-xl mt-2">{siteConfig.featuredBook.price}</p>
-             </div>
-          </div>
-        </div>
-      </header>
-
-      {/* Features/Benefits */}
-      <section className="bg-black text-white py-24 px-8">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-16">
-          {siteConfig.benefits.map((benefit, i) => (
-            <div key={i} className="border-t border-white/20 pt-8">
-              <span className="text-orange-500 text-sm font-bold">0{i+1}</span>
-              <h3 className="text-3xl mt-4 mb-4">{benefit.title}</h3>
-              <p className="text-gray-400 leading-relaxed">{benefit.desc}</p>
+      <main className="max-w-7xl mx-auto">
+        {/* Hero */}
+        <section className="pt-32 pb-24 px-8 md:px-16 text-center md:text-left grid md:grid-cols-2 gap-16 items-center">
+          <div>
+            <span className="inline-block text-accent text-[11px] font-black uppercase tracking-[0.4em] mb-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
+              {siteConfig.hero.badge}
+            </span>
+            <h1 className="text-7xl md:text-[120px] font-black leading-[0.9] mb-10 text-balance animate-in fade-in slide-in-from-bottom-8 duration-1000">
+              {siteConfig.hero.title}
+            </h1>
+            <p className="text-lg md:text-xl text-muted leading-relaxed mb-12 max-w-md opacity-80">
+              {siteConfig.hero.subtitle}
+            </p>
+            <div className="flex flex-col sm:flex-row gap-6">
+              <a href={siteConfig.hero.cta.href} className="bg-accent text-bg px-10 py-5 font-bold text-sm uppercase tracking-widest hover:scale-105 transition-transform text-center">
+                {siteConfig.hero.cta.text}
+              </a>
+              <a href={siteConfig.hero.secondaryCta.href} className="border border-white/20 px-10 py-5 font-bold text-sm uppercase tracking-widest hover:bg-white/5 transition-all text-center">
+                {siteConfig.hero.secondaryCta.text}
+              </a>
             </div>
-          ))}
-        </div>
-      </section>
+          </div>
 
-      {/* Categories */}
-      <section id="katalog" className="py-24 px-8 max-w-7xl mx-auto text-center">
-         <h2 className="text-5xl mb-16">Wybierz swoją ścieżkę</h2>
-         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {siteConfig.categories.map((cat, i) => (
-              <div key={i} className="group cursor-pointer border border-black/5 p-12 hover:border-orange-500 transition-colors bg-white">
-                <h4 className="text-2xl font-bold group-hover:text-orange-600 transition-colors">{cat.name}</h4>
-                <p className="text-gray-400 mt-4 font-medium uppercase tracking-tighter">{cat.count} publikacji</p>
-              </div>
+          <div className="relative group perspective-1000">
+            <div className="absolute -inset-20 bg-accent/10 rounded-full blur-[120px] opacity-20 group-hover:opacity-40 transition-opacity"></div>
+            <div className="relative aspect-[3/4] bg-dark-surface border border-white/10 p-12 shadow-2xl transform hover:rotate-y-12 transition-transform duration-700 ease-out flex flex-col justify-between overflow-hidden">
+                <div className="border-t border-accent w-12 pt-4">
+                  <span className="text-accent serif italic text-lg">{siteConfig.product.version}</span>
+                </div>
+                <div className="space-y-4">
+                  <h2 className="text-5xl font-black leading-tight">{siteConfig.product.title}</h2>
+                  <p className="text-sm opacity-40 uppercase tracking-[0.2em]">{siteConfig.product.oneLiner}</p>
+                </div>
+                <div className="absolute top-0 right-0 p-8">
+                  <div className="w-16 h-16 border border-white/10 rounded-full flex items-center justify-center opacity-20">
+                     <div className="w-2 h-2 bg-white rounded-full"></div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Manifesto / About */}
+        <section id="about" className="py-32 px-8 md:px-16 border-y border-white/5">
+          <div className="max-w-3xl">
+            <h2 className="text-4xl md:text-6xl mb-12">{siteConfig.about.title}</h2>
+            <p className="text-xl md:text-2xl leading-relaxed text-muted font-light italic">
+              "{siteConfig.about.text}"
+            </p>
+          </div>
+        </section>
+
+        {/* Contents */}
+        <section id="contents" className="py-32 px-8 md:px-16">
+          <div className="grid md:grid-cols-2 gap-24">
+            <div>
+               <h2 className="text-5xl mb-16 underline decoration-accent underline-offset-8">Table of Contents</h2>
+               <div className="space-y-12">
+                  {siteConfig.product.chapters.map((chapter) => (
+                    <div key={chapter.id} className="group cursor-default">
+                      <div className="flex items-baseline gap-6 mb-2">
+                        <span className="text-accent text-sm font-mono opacity-60">{chapter.id}</span>
+                        <h3 className="text-3xl group-hover:text-accent transition-colors">{chapter.title}</h3>
+                      </div>
+                      <p className="pl-12 text-muted opacity-60 leading-relaxed">{chapter.desc}</p>
+                    </div>
+                  ))}
+               </div>
+            </div>
+            <div className="bg-dark-surface p-12 md:p-20 flex flex-col justify-center border border-white/5">
+               <h3 className="text-3xl mb-8">What you get</h3>
+               <ul className="space-y-6">
+                  {siteConfig.product.features.map((feature, i) => (
+                    <li key={i} className="flex items-center gap-4 text-muted">
+                      <div className="w-1.5 h-1.5 bg-accent"></div>
+                      <span className="text-lg font-medium">{feature}</span>
+                    </li>
+                  ))}
+               </ul>
+               <div className="mt-16 pt-12 border-t border-white/10">
+                  <div className="flex items-baseline gap-4 mb-8">
+                    <span className="text-5xl font-black">{siteConfig.product.price}</span>
+                    <span className="text-sm opacity-40 line-through">199 PLN</span>
+                  </div>
+                  <button id="order" className="w-full bg-fg text-bg py-6 font-black text-sm uppercase tracking-[0.3em] hover:bg-accent hover:text-bg transition-colors">
+                    Buy the Manual
+                  </button>
+               </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer className="py-24 px-8 md:px-16 border-t border-white/5 bg-dark-surface/30">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12">
+          <div className="flex items-center gap-3">
+             <div className="w-6 h-6 bg-accent/20 rounded-full"></div>
+             <span className="text-sm font-bold opacity-60">{siteConfig.name} Studio</span>
+          </div>
+          <div className="flex gap-12">
+            {siteConfig.footer.links.map((link) => (
+              <a key={link.text} href={link.href} className="text-[10px] uppercase tracking-widest opacity-40 hover:opacity-100 transition-opacity">
+                {link.text}
+              </a>
             ))}
-         </div>
-      </section>
-
-      <footer className="border-t border-black/5 py-12 px-8 text-center text-gray-500 text-sm">
-        <p>{siteConfig.footer.copyright}</p>
+          </div>
+          <p className="text-[10px] uppercase tracking-widest opacity-20">{siteConfig.footer.copyright}</p>
+        </div>
       </footer>
     </div>
   );

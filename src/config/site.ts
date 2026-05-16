@@ -1,43 +1,48 @@
 // src/config/site.ts
 export const siteConfig = {
-  name: "VSS Ebook Store",
-  tagline: "Prestiżowa wiedza w zasięgu ręki",
-  description: "Ekskluzywna biblioteka ebooków dla przedsiębiorców i wizjonerów.",
+  name: "Deepness",
+  tagline: "Manual for Focus in the Age of Noise",
+  description: "A comprehensive system for reclaiming your cognitive sovereignty.",
+  
+  product: {
+    title: "Digital Deepness",
+    version: "2.0 (2026 Edition)",
+    price: "129 PLN",
+    oneLiner: "How to build deep work systems in an AI-saturated world.",
+    description: "This is not just an ebook. It's a architectural blueprint for your mind. Learn how to design a life where concentration is your default state, not a rare event.",
+    chapters: [
+      { id: "01", title: "The Distraction Economy", desc: "Understanding the neural toll of constant connectivity." },
+      { id: "02", title: "The Sovereignty Protocol", desc: "Building your personal digital firewall." },
+      { id: "03", title: "Deep Work Architecture", desc: "Designing environments that force flow states." },
+      { id: "04", title: "Human+AI Synergy", desc: "Using machines without losing your humanity." },
+    ],
+    features: [
+      "140+ Pages of Evidence-Based Strategies",
+      "Printable Focus Routine Templates",
+      "Private Community Access",
+      "Quarterly Digital Audits"
+    ]
+  },
   
   hero: {
-    badge: "Nowa Kolekcja 2026",
-    title: "Wiedza, która\ndefiniuje przyszłość",
-    subtitle: "Porzuć hałas. Skup się na esencji. Wyselekcjonowane ebooki, które pomogą Ci zdominować rynek dotacji i technologii AI.",
-    cta: { text: "Przeglądaj Bibliotekę", href: "#katalog" },
-    secondaryCta: { text: "O metodzie VSS", href: "#metoda" },
+    badge: "Available Now",
+    title: "Focus is the new\nQuiet Luxury.",
+    subtitle: "In a world screaming for your attention, the ultimate power is the ability to ignore it all. Master the art of deep work with the manual that changed everything.",
+    cta: { text: "Secure Your Copy", href: "#order" },
+    secondaryCta: { text: "Read the Preface", href: "#about" },
   },
   
-  featuredBook: {
-    title: "Radar Dotacji 2026",
-    author: "Dawid Gibaszek",
-    price: "199 PLN",
-    description: "Kompletny przewodnik po miliardach z KPO i funduszy regionalnych. Strategia, nie tylko teoria.",
-    image: "/cover.jpg",
+  about: {
+    title: "Why this? Why now?",
+    text: "Average human attention spans have dropped to 8 seconds. We are becoming a shallow species. 'Digital Deepness' is the antidote. It’s a synthesis of neurobiology, stoic philosophy, and modern productivity systems, designed for those who refuse to be just another data point in an algorithm."
   },
-  
-  categories: [
-    { name: "Finanse i Dotacje", icon: "Wallet", count: 12 },
-    { name: "Sztuczna Inteligencja", icon: "Cpu", count: 8 },
-    { name: "Strategia Biznesowa", icon: "TrendingUp", count: 15 },
-  ],
-  
-  benefits: [
-    { title: "Editorial Quality", desc: "Każdy ebook to jakość premium, merytoryka bez lania wody." },
-    { title: "Immediate Access", desc: "Pobierz i czytaj natychmiast po zakupie na dowolnym urządzeniu." },
-    { title: "Exclusive Updates", desc: "Darmowe aktualizacje treści przez 12 miesięcy od zakupu." },
-  ],
 
   footer: {
-    copyright: "© 2026 VSS Ebook Store. Wszelkie prawa zastrzeżone.",
+    copyright: "© 2026 Deepness Studio. Built for the focused few.",
     links: [
-      { text: "Regulamin", href: "/terms" },
-      { text: "Polityka Prywatności", href: "/privacy" },
-      { text: "Kontakt", href: "/contact" },
+      { text: "Privacy", href: "/privacy" },
+      { text: "Terms", href: "/terms" },
+      { text: "Contact", href: "/contact" },
     ]
   }
 }

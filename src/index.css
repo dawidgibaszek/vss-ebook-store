@@ -4,15 +4,17 @@
 @theme {
   --font-serif: "Playfair Display", serif;
   --font-sans: "Plus Jakarta Sans", sans-serif;
-  --color-background: #fafafa;
-  --color-foreground: #111111;
-  --color-accent: #ff6b35;
+  --color-bg: #0F110C;
+  --color-fg: #F4F1DE;
+  --color-accent: #E07A5F;
+  --color-muted: #81B29A;
+  --color-dark-surface: #1A1D16;
 }
 
 body {
   font-family: var(--font-sans);
-  background-color: var(--color-background);
-  color: var(--color-foreground);
+  background-color: var(--color-bg);
+  color: var(--color-fg);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -27,11 +29,24 @@ body {
   height: 100%;
   pointer-events: none;
   z-index: 50;
-  opacity: 0.04;
+  opacity: 0.05;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 
 h1, h2, h3 {
   font-family: var(--font-serif);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+}
+
+.border-subtle {
+  border-color: rgba(244, 241, 222, 0.1);
+}
+
+.text-balance {
+  text-wrap: balance;
 }
