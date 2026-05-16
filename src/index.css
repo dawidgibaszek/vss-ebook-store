@@ -1,27 +1,22 @@
-/* src/index.css */
+@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --background: #fafafa;
-  --foreground: #111111;
-  --primary: #000000;
-  --accent: #ff6b35; /* Pozostawiamy pomarańczowy akcent z radar-dotacji dla spójności */
-  --serif: 'Playfair Display', serif;
-  --sans: 'Plus Jakarta Sans', sans-serif;
+@theme {
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+  --color-background: #fafafa;
+  --color-foreground: #111111;
+  --color-accent: #ff6b35;
 }
 
 body {
-  font-family: var(--sans);
-  background-color: var(--background);
-  color: var(--foreground);
+  font-family: var(--font-sans);
+  background-color: var(--color-background);
+  color: var(--color-foreground);
   -webkit-font-smoothing: antialiased;
 }
 
-.serif { font-family: var(--serif); }
+.serif { font-family: var(--font-serif); }
 
 /* Grain Texture Overlay */
 .grain::before {
@@ -33,10 +28,10 @@ body {
   pointer-events: none;
   z-index: 50;
   opacity: 0.04;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3 Fortuitous grain texture %3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 
 h1, h2, h3 {
-  font-family: var(--serif);
+  font-family: var(--font-serif);
   letter-spacing: -0.02em;
 }
